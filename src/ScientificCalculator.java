@@ -10,48 +10,16 @@ public class ScientificCalculator {
             int ch=userInput.nextInt();
             switch (ch){
                 case 1:
-                    try{
-                        System.out.print("Enter first number: ");
-                        double n1=userInput.nextInt();
-                        System.out.print("Enter second number: ");
-                        double n2=userInput.nextInt();
-                    System.out.println(n1 +" + "+ n2 + "= "+add(n1,n2));
-                    }catch (InputMismatchException e) {
-                        System.out.println("Error: Only number are allowed!");
-                    }
+                    performAddition(userInput);
                     break;
                 case 2:
-                    try{
-                        System.out.print("Enter first number: ");
-                        double n1=userInput.nextInt();
-                        System.out.print("Enter second number: ");
-                        double n2=userInput.nextInt();
-                        System.out.println(n1 +" - "+ n2 + "= "+subtract(n1,n2));
-                    }catch (InputMismatchException e) {
-                        System.out.println("Error: Only number are allowed!");
-                    }
+                    performSubtraction(userInput);
                     break;
                 case 3:
-                    try{
-                        System.out.print("Enter first number: ");
-                        double n1=userInput.nextInt();
-                        System.out.print("Enter second number: ");
-                        double n2=userInput.nextInt();
-                        System.out.println(n1 +" x "+ n2 + "= "+multiply(n1,n2));
-                    }catch (InputMismatchException e) {
-                        System.out.println("Error: Only number are allowed!");
-                    }
+                    performMultiplication(userInput);
                     break;
                 case 4:
-                    try{
-                        System.out.print("Enter first number: ");
-                        double n1=userInput.nextInt();
-                        System.out.print("Enter second number: ");
-                        double n2=userInput.nextInt();
-                        System.out.println(n1 +" / "+ n2 + "= "+divide(n1,n2));
-                    }catch (InputMismatchException e) {
-                        System.out.println("Error: Only number are allowed!");
-                    }
+                    performDivision(userInput);
                     break;
                 case 5:
                     coniditon=false;
@@ -107,15 +75,60 @@ public class ScientificCalculator {
     // ceiling
     public static double ceilingNumber(double num) {return Math.ceil(num);}
     //floor
-    public static double floorNumber(double num) {
-        return Math.floor(num);
+    public static double floorNumber(double num) {return Math.floor(num);}
+    //min
+    public static double findMin(double num1, double num2) {return Math.min(num1, num2);}
+    //max
+    public static double findMax(double num1, double num2) {return Math.max(num1, num2);}
+
+    //operating methods
+    private static void performAddition(Scanner scanner) {
+        try{
+            System.out.print("Enter first number: ");
+            double n1=scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double n2=scanner.nextDouble();
+            System.out.println(n1 +" + "+ n2 + "= "+add(n1,n2));
+        }catch (InputMismatchException e) {
+            System.out.println("Error: Only number are allowed!");
+        }
     }
 
-    public static double findMin(double num1, double num2) {
-        return Math.min(num1, num2);
+    private static void performSubtraction(Scanner scanner) {
+        try{
+            System.out.print("Enter first number: ");
+            double n1=scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double n2=scanner.nextDouble();
+            System.out.println(n1 +" - "+ n2 + "= "+subtract(n1,n2));
+        }catch (InputMismatchException e) {
+            System.out.println("Error: Only number are allowed!");
+        }
     }
 
-    public static double findMax(double num1, double num2) {
-        return Math.max(num1, num2);
+    private static void performMultiplication(Scanner scanner) {
+        try{
+            System.out.print("Enter first number: ");
+            double n1=scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double n2=scanner.nextDouble();
+            System.out.println(n1 +" x "+ n2 + "= "+multiply(n1,n2));
+        }catch (InputMismatchException e) {
+            System.out.println("Error: Only number are allowed!");
+        }
+    }
+
+    private static void performDivision(Scanner scanner) {
+        try{
+            System.out.print("Enter first number: ");
+            double n1=scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double n2=scanner.nextDouble();
+            System.out.println(n1 +" / "+ n2 + "= "+divide(n1,n2));
+        }catch (InputMismatchException e) {
+            System.out.println("Error: Only number are allowed!");
+        }
     }
 }
+
+
