@@ -22,6 +22,44 @@ public class ScientificCalculator {
                     performDivision(userInput);
                     break;
                 case 5:
+                    performSquareRoot(userInput);
+                    break;
+                case 6:  // Power
+                    break;
+
+                case 7:  // Sine
+                    break;
+
+                case 8:  // Cosine
+                    break;
+
+                case 9:  // Tangent
+                    break;
+
+                case 10: // Natural Logarithm
+                    break;
+
+                case 11: // Logarithm Base 10
+                    break;
+
+                case 12: // Absolute Value
+                    break;
+
+                case 13: // Round Number
+                    break;
+
+                case 14: // Ceiling Number
+                    break;
+
+                case 15: // Floor Number
+                    break;
+
+                case 16: // Find Minimum
+                    break;
+
+                case 17: // Find Maximum
+                    break;
+                case 18:
                     coniditon=false;
                     userInput.close();
                     System.out.println("Goodbye");
@@ -142,6 +180,16 @@ public class ScientificCalculator {
             System.out.println("Error: Only number are allowed!");
         }
     }
+    private static void performSquareRoot(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("√" + num + " = " + calculateSquareRoot(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
 }
 
 
