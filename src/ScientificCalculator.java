@@ -41,9 +41,11 @@ public class ScientificCalculator {
                     break;
 
                 case 10: // Natural Logarithm
+                    performNaturalLogarithm(userInput);
                     break;
 
                 case 11: // Logarithm Base 10
+                    performLogarithmBase10(userInput);
                     break;
 
                 case 12: // Absolute Value
@@ -232,6 +234,25 @@ public class ScientificCalculator {
             System.out.print("Enter angle in degrees: ");
             double degrees = scanner.nextDouble();
             System.out.println("tan(" + degrees + "°) = " + calculateTangent(degrees));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+    private static void performNaturalLogarithm(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("ln(" + num + ") = " + calculateNaturalLogarithm(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performLogarithmBase10(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("log₁₀(" + num + ") = " + calculateLogarithmBase10(num));
         } catch (InputMismatchException e) {
             System.out.println("Error: Only numbers are allowed!");
         }
