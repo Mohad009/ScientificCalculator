@@ -53,12 +53,15 @@ public class ScientificCalculator {
                     break;
 
                 case 13: // Round Number
+                    performRound(userInput);
                     break;
 
                 case 14: // Ceiling Number
+                    performCeiling(userInput);
                     break;
 
                 case 15: // Floor Number
+                    performFloor(userInput);
                     break;
 
                 case 16: // Find Minimum
@@ -263,6 +266,36 @@ public class ScientificCalculator {
             System.out.print("Enter number: ");
             double num = scanner.nextDouble();
             System.out.println("|" + num + "| = " + absoluteValue(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performRound(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("round(" + num + ") = " + roundNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performCeiling(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("ceil(" + num + ") = " + ceilingNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performFloor(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("floor(" + num + ") = " + floorNumber(num));
         } catch (InputMismatchException e) {
             System.out.println("Error: Only numbers are allowed!");
         }
