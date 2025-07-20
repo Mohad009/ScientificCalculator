@@ -49,6 +49,7 @@ public class ScientificCalculator {
                     break;
 
                 case 12: // Absolute Value
+                    performAbsoluteValue(userInput);
                     break;
 
                 case 13: // Round Number
@@ -253,6 +254,15 @@ public class ScientificCalculator {
             System.out.print("Enter number: ");
             double num = scanner.nextDouble();
             System.out.println("log₁₀(" + num + ") = " + calculateLogarithmBase10(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+    private static void performAbsoluteValue(Scanner scanner) {
+        try {
+            System.out.print("Enter number: ");
+            double num = scanner.nextDouble();
+            System.out.println("|" + num + "| = " + absoluteValue(num));
         } catch (InputMismatchException e) {
             System.out.println("Error: Only numbers are allowed!");
         }
