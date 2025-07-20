@@ -6,6 +6,7 @@ public class ScientificCalculator {
         boolean coniditon=true;
         while(coniditon){
     displayMenu();
+            try{
 
             int ch=userInput.nextInt();
             switch (ch){
@@ -79,6 +80,10 @@ public class ScientificCalculator {
                 default:
                     System.out.println("Enter a valid number");
 
+            }
+            }catch (InputMismatchException e){
+                System.out.println("Only numbers is allowed");
+                coniditon=false;
             }
 
         }
