@@ -37,11 +37,24 @@ public class ScientificCalculator {
     // --- Menu Display Method ---
     public static void displayMenu() {
         System.out.println("===============================================");
-        System.out.println("1.Add");
-        System.out.println("2.Subtract");
-        System.out.println("3.Multiply");
-        System.out.println("4.Divide");
-        System.out.println("5.Exit");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Divide");
+        System.out.println("5. Square Root");
+        System.out.println("6. Power");
+        System.out.println("7. Sine");
+        System.out.println("8. Cosine");
+        System.out.println("9. Tangent");
+        System.out.println("10. Natural Logarithm");
+        System.out.println("11. Logarithm Base 10");
+        System.out.println("12. Absolute Value");
+        System.out.println("13. Round Number");
+        System.out.println("14. Ceiling Number");
+        System.out.println("15. Floor Number");
+        System.out.println("16. Find Minimum");
+        System.out.println("17. Find Maximum");
+        System.out.println("18. Exit");
         System.out.println("===============================================\n");
         System.out.print("Please enter your choice: ");
     }
