@@ -29,12 +29,15 @@ public class ScientificCalculator {
                     break;
 
                 case 7:  // Sine
+                    performSine(userInput);
                     break;
 
                 case 8:  // Cosine
+                    performCosine(userInput);
                     break;
 
                 case 9:  // Tangent
+                    performTangent(userInput);
                     break;
 
                 case 10: // Natural Logarithm
@@ -199,6 +202,36 @@ public class ScientificCalculator {
             System.out.print("Enter exponent: ");
             double num2 = scanner.nextDouble();
             System.out.println(num1 + "^" + num2 + " = " + calculatePower(num1, num2));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performSine(Scanner scanner) {
+        try {
+            System.out.print("Enter angle in degrees: ");
+            double degrees = scanner.nextDouble();
+            System.out.println("sin(" + degrees + "°) = " + calculateSine(degrees));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performCosine(Scanner scanner) {
+        try {
+            System.out.print("Enter angle in degrees: ");
+            double degrees = scanner.nextDouble();
+            System.out.println("cos(" + degrees + "°) = " + calculateCosine(degrees));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performTangent(Scanner scanner) {
+        try {
+            System.out.print("Enter angle in degrees: ");
+            double degrees = scanner.nextDouble();
+            System.out.println("tan(" + degrees + "°) = " + calculateTangent(degrees));
         } catch (InputMismatchException e) {
             System.out.println("Error: Only numbers are allowed!");
         }
