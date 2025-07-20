@@ -25,6 +25,7 @@ public class ScientificCalculator {
                     performSquareRoot(userInput);
                     break;
                 case 6:  // Power
+                    performPower(userInput);
                     break;
 
                 case 7:  // Sine
@@ -190,6 +191,19 @@ public class ScientificCalculator {
         }
     }
 
+
+    private static void performPower(Scanner scanner) {
+        try {
+            System.out.print("Enter base number: ");
+            double num1 = scanner.nextDouble();
+            System.out.print("Enter exponent: ");
+            double num2 = scanner.nextDouble();
+            System.out.println(num1 + "^" + num2 + " = " + calculatePower(num1, num2));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
 }
+
 
 
