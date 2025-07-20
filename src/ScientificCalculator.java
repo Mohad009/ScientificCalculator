@@ -65,9 +65,11 @@ public class ScientificCalculator {
                     break;
 
                 case 16: // Find Minimum
+                    performMin(userInput);
                     break;
 
                 case 17: // Find Maximum
+                    performMax(userInput);
                     break;
                 case 18:
                     coniditon=false;
@@ -296,6 +298,30 @@ public class ScientificCalculator {
             System.out.print("Enter number: ");
             double num = scanner.nextDouble();
             System.out.println("floor(" + num + ") = " + floorNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performMin(Scanner scanner) {
+        try {
+            System.out.print("Enter first number: ");
+            double num1 = scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double num2 = scanner.nextDouble();
+            System.out.println("min(" + num1 + ", " + num2 + ") = " + findMin(num1, num2));
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Only numbers are allowed!");
+        }
+    }
+
+    private static void performMax(Scanner scanner) {
+        try {
+            System.out.print("Enter first number: ");
+            double num1 = scanner.nextDouble();
+            System.out.print("Enter second number: ");
+            double num2 = scanner.nextDouble();
+            System.out.println("max(" + num1 + ", " + num2 + ") = " + findMax(num1, num2));
         } catch (InputMismatchException e) {
             System.out.println("Error: Only numbers are allowed!");
         }
